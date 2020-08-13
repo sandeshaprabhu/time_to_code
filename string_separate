@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char *str = NULL, ch ; //to store the string of unknown size
+   int i = 0 ;
+   str = (char*) malloc (2*sizeof(char)) ;//alocating two bytes for string
+   *str = '\0' ;
+   printf("Enter the string:");
+   while( (ch=getchar()) != '\n' )  //unless u press enter the system takes the string
+   {
+     *(str+i) = ch ;
+      i++ ;
+      str = (char*) realloc(str, (2*sizeof(char)) + i ) ;
+   }
+   *(str+i) = '\0' ;    //appending \0to last of the string
+   //coding starts
+   char d;         //to store delimiter
+   printf("\nEnter the delimiter:"); //to enter the delimiter
+   scanf("%c",&d);
+   int j;
+   /****seperation of strings starts here****/
+  for(j=0;str[j]!='\0';j++)
+  {
+      if(str[j]!=d)
+      {
+       printf("%c",str[j]);
+      }
+      else
+      {
+        printf("\n");
+      }
+  }
+  return(0);
+}
+
