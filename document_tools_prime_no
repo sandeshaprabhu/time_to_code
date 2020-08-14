@@ -1,0 +1,42 @@
+/// @file prime.c
+#include<stdio.h>
+#include<stdbool.h>
+///this is function declaration
+bool checkprime(int);
+/**
+ * This is a main function
+ * it inputs the number
+ * calls the prime function
+ */
+int main()
+{
+  int num;
+  bool a;
+  printf("\nEnter the number:");
+  scanf("%d",&num);
+  a=checkprime(num);
+  printf("%d",a);
+}
+/**
+ * Check whether a number is prime or not.
+ * 
+ * @param[in] Number
+ * @param[out] BOOLEAN TRUE OR FALSE
+*/
+bool checkprime(int num)
+{
+  int i,flag=0;
+  if(num<=1)
+   return(false);
+  for(i=2;i<=num/2;i++)
+  {
+    if(num%i==0)
+    {
+     flag=1;
+    }
+  }
+  if(flag)
+   return(false);
+  else
+    return(true);
+  }
