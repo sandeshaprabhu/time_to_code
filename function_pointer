@@ -19,13 +19,13 @@ int main()
   printf("ENTER\n 1 FOR ADDITION\n2 FOR SUBTRACTION\n ENTER:");
   scanf("%d",&ch);
   }while(ch<0||ch>2);
-  switch(choice)
+  switch(ch)
   {
     case 1: ptr=add;
-            printf("Result%d",ptr(val,val2));
+            printf("Result%d",ptr(val1,val2));
             break;
    case 2:  ptr=sub;
-            printf("Result:%d",ptr(val,val2));
+            printf("Result:%d",ptr(val1,val2));
             break;
     
   }
