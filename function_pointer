@@ -1,0 +1,32 @@
+#include<stdio.h>
+//addition function
+int add(int a,int b)
+{
+  return(a+b);
+}
+int sub(int a,int b)
+{
+  return(a-b);
+}
+int (*ptr)(int,int)=NULL;//function pointer
+int main()
+{
+  int val1,val2,ch;
+  val1=10;
+  val2=20;
+  do
+  {
+  printf("ENTER\n 1 FOR ADDITION\n2 FOR SUBTRACTION\n ENTER:");
+  scanf("%d",&ch);
+  }while(ch<0||ch>2);
+  switch(choice)
+  {
+    case 1: ptr=add;
+            printf("Result%d",ptr(val,val2));
+            break;
+   case 2:  ptr=sub;
+            printf("Result:%d",ptr(val,val2));
+            break;
+    
+  }
+}
